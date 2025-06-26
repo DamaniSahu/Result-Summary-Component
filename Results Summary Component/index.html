@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz@10..72&family=Figtree:ital,wght@0,300..900;1,300..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Kumbh+Sans:wght@100..900&family=Lexend+Deca:wght@100..900&family=Outfit:wght@100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <title> Results summary component</title>
+
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Hanken Grotesk", sans-serif;
+    }
+
+    body{
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: hsl(221, 100%, 96%);
+    }
+
+    article{
+      width: 50%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      background-color: white;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    #box1{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 50%;
+      padding: 30px 40px;
+      border-radius: 20px;
+      align-items: center;
+      color: hsl(221, 100%, 96%);
+      background-color: hsl(241, 81%, 54%);
+    }
+
+    #box1 h3{
+      color: hsl(241, 100%, 89%);
+    }
+
+    .circle{
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 30px 0px;
+      background: linear-gradient(hsl(256, 72%, 46%), hsl(241, 72%, 46%));
+      box-shadow: 0 20px 30px rgba(0, 0, 0, 0.17);
+    }
+
+    .circle h1{
+      font-size: 2.8rem;
+      color: hsl(221, 100%, 96%);
+    }
+
+    .circle span{
+      color: hsl(224, 30%, 70%);
+    }
+
+    #paraHead{
+      font-size: 1.4rem;
+      margin-top: 10px;
+    }
+
+    #para{
+      margin: 20px;
+      font-size: 0.8rem;
+      text-align: center;
+      color: hsl(221, 90%, 85%);
+    }
+
+    #box2{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 10px;
+      width: 50%;
+      padding: 25px 40px;
+      border-radius: 0px 20px 20px 0px;
+      background-color: white;
+    }
+
+    #box2Head{
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      color: hsl(224, 30%, 27%);
+    }
+
+    .data1, .data2, .data3, .data4{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 8px;
+      padding: 8px;
+      margin-top: 10px;
+      font-size: 0.9rem;
+    }
+
+    .data1{
+      background-color: hsl(0, 100%, 96%);
+    }
+
+    .data1 .left span{
+      color: hsl(0, 100%, 67%);
+    }
+
+    .data2{
+      background-color: hsl(39, 100%, 96%);
+    }
+
+    .data2 .left span{
+      color: hsl(39, 100%, 56%);
+    }
+
+    .data3{
+      background-color: hsl(166, 100%, 96%)
+    }
+
+    .data3 .left span{
+      color: hsl(166, 100%, 37%);
+    }
+
+    .data4{
+      background-color: hsl(234, 85%, 96%)
+    }
+
+    .data4 .left span{
+      color: hsl(234, 85%, 45%);
+    }
+
+    .left{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .left span{
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+
+    .rightSpan{
+      font-size: 0.8rem;
+      color: hsl(224, 30%, 27%);
+      font-weight: 700;
+    }
+
+    .s{
+      font-size: 0.8rem;
+      color: gray;
+      font-weight: 700;
+    }
+
+    button{
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-top: 30px;
+      padding: 12px;
+      border-radius: 25px;
+      border: none;
+      cursor: pointer;
+      color: white;
+      background-color: hsl(224, 30%, 27%);
+    }
+
+    button:hover{
+      background-color: hsl(241, 81%, 54%);
+    }
+
+    @media(max-width: 768px) {
+      article{
+        width: 90%;
+        flex-direction: column;
+      }
+
+      #box1{
+        width: 100%;
+        border-radius: 0px 0px 20px 20px;
+      }
+
+      #box2{
+        width: 100%;
+      }
+    }
+
+    @media (width: 1024px) {
+    article {
+      width: 70%; 
+    }
+  }
+  </style>
+</head>
+<body>
+
+  <article>
+    <section id="box1">
+      <h3>Your Result</h3>
+      <div class="circle">
+        <h1>76</h1>
+        <span>of 100</span>
+      </div>
+      <h1 id="paraHead">Great</h1>
+      <p id="para">
+        You scored higher than 65% of the people who have taken these tests.
+      </p>
+    </section>
+
+    <section id="box2">
+      <h2 id="box2Head">Summary</h2>
+
+      <div class="data1">
+        <div class="left">
+          <img src="images/icon-reaction.svg" alt="Reaction">
+          <span>Reaction</span>
+        </div>
+
+        <div class="right">
+        <span class="rightSpan">80</span>
+        <span class="s">/ 100</span>
+        </div>
+      </div>
+
+      <div class="data2">
+        <div class="left">
+          <img src="images/icon-memory.svg" alt="Memory">
+          <span>Memory</span>
+        </div>
+
+        <div class="right">
+        <span class="rightSpan">92</span>
+        <span class="s">/ 100</span>
+        </div>
+      </div>
+
+      <div class="data3">
+        <div class="left">
+          <img src="images/icon-verbal.svg" alt="Verbal">
+          <span>Verbal</span>
+        </div>
+
+        <div class="right">
+        <span class="rightSpan">61</span>
+        <span class="s">/ 100</span>
+        </div>
+      </div>
+
+      <div class="data4">
+        <div class="left">
+          <img src="images/icon-visual.svg" alt="vi">
+          <span>Visual</span>
+        </div>
+
+        <div class="right">
+        <span class="rightSpan">72</span>
+        <span class="s">/ 100</span>
+        </div>
+      </div>
+      <button type="button">Continue</button>
+    </section>
+  </article>
+</body>
+</html>
