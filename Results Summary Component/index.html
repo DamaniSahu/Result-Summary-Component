@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz@10..72&family=Figtree:ital,wght@0,300..900;1,300..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Kumbh+Sans:wght@100..900&family=Lexend+Deca:wght@100..900&family=Outfit:wght@100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
@@ -29,7 +29,7 @@
     }
 
     article{
-      width: 50%;
+      width: 45%;
       display: flex;
       flex-direction: row;
       justify-content: center;
@@ -94,7 +94,7 @@
       justify-content: center;
       gap: 10px;
       width: 50%;
-      padding: 25px 40px;
+      padding: 35px 40px;
       border-radius: 0px 20px 20px 0px;
       background-color: white;
     }
@@ -188,7 +188,7 @@
       background-color: hsl(241, 81%, 54%);
     }
 
-    @media(max-width: 768px) {
+    @media(max-width: 649px) {
       article{
         width: 90%;
         flex-direction: column;
@@ -204,9 +204,15 @@
       }
     }
 
-    @media (width: 1024px) {
+    @media(min-width: 650px) and (max-width: 850px) {
+      article{
+        width: 80%;
+      }
+    }
+
+    @media (min-width: 851px) and (max-width: 1300px) {
     article {
-      width: 70%; 
+      width: 60%; 
     }
   }
   </style>
