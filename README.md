@@ -22,7 +22,7 @@ This project is a practice challenge to improve layout skills, flexbox usage, an
 ---
 
 ## 🌐 Live Demo  
-👉 [View Project Here](https://your-netlify-link.netlify.app/)  
+👉 https://project-result-summary-component.netlify.app/ 
 
 ---
 
@@ -41,5 +41,5 @@ This project is a practice challenge to improve layout skills, flexbox usage, an
 ## ⚡ How to Run  
 1. Clone this repository:  
    ```bash
-   git clone https://github.com/your-username/results-summary-component.git
+   git clone https://github.com/DamaniSahu/Result-Summary-Component.git
 2. Open index.html in your browser.
